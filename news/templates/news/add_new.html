@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Non Title</title>
+</head>
+<body>
+<form action="{% url 'news:save' %}" method="post">
+	{% csrf_token %} 
+	<p>{{f.title}}</p>
+	<p>{{f.content}}</p>
+	<p>{{f.time_create}}</p>
+	<input type="submit" value="thêm">	
+</form>
+</body>
+</html> 
